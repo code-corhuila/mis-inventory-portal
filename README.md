@@ -16,10 +16,15 @@ only sees stock. Filters use lot UUID, expiry or movement date range; dates are
 displayed in America/Bogota. Names use the first 100 Catalog/Suppliers API records
 per mount; missing names fall back to IDs. No cross-domain database reads occur.
 Pagination derives pages from meta.total, not a nonexistent totalPages field.
-CI runs five model tests, not browser/backend acceptance. See
+CI runs eleven model tests, not browser/backend acceptance. See
 [operator evidence](docs/WEB-001-inventory-acceptance.md).
-Entries, exits, integrated reception, alert screens, production packaging and QA
-remain pending in the frontend. This reader does not close WEB-001.
+ADMIN/INVENTORY can register a stock exit with quantity and reason. An uncertain
+response retains the immutable body/key across navigation within the login;
+replay does not optimistically subtract stock. Only an acknowledged result refreshes
+owner reads. Logout/reload loses this local intent; cross-session recovery is absent.
+See [exit acceptance](docs/WEB-001-exits-acceptance.md). Reception lives in Suppliers
+and uses Workflow. Alert screens, production packaging and QA remain pending.
+This increment does not close WEB-001.
 
 ## Branching
 
