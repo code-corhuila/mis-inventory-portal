@@ -26,7 +26,14 @@ See [exit acceptance](docs/WEB-001-exits-acceptance.md). Reception lives in Supp
 and uses Workflow. Alert screens, production packaging and QA remain pending.
 This increment does not close WEB-001.
 
-## Branching
+## Demo-inspired portal styling
+
+The existing isolated styles now align headings, tabs, primary commands, filter
+fields and contained tables with the shell. Exit forms stack on mobile; labels
+and real quantities retain their meanings. Models, roles and replay semantics are
+unchanged. See [visual acceptance](docs/WEB-001-visual-acceptance.md).
+
+## Branching Policy
 
 Three permanent branches. **None of them accepts a direct commit** — you enter through a child
 branch and leave through a Pull Request.
